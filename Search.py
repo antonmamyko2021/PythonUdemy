@@ -4,7 +4,7 @@ def midf(upper, lower):
    return int(round((upper - lower) / 2, 0))
 
 lower = 0
-upper = 9999999999
+upper = 99999999999999999999999999999999999999999999999999999999999999999999
 q = False
 think = random.randrange(lower, upper)
 
@@ -21,7 +21,7 @@ while q == False:
     elif mid > think:
         print ('{} is too high'.format(mid))
         upper = mid
-        mid = int(round((upper - lower) / 2, 0))
+        mid = lower + int(round((upper - lower) / 2, 0))
     elif mid == think:
         print(' Correct! I guessed {} correctly, I went for {}'.format(mid, think))
         q = True
